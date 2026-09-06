@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍚 Lontong Khas · RENZ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f9f3e8;
+            font-family: 'Segoe UI', 'Courier New', monospace;
+            min-height: 100vh;
+            padding: 20px;
+            color: #2d1f14;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fffaf2;
+            border-radius: 40px 40px 20px 20px;
+            padding: 30px 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border: 1px solid #ede0d4;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px dashed #d4b8a0;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+        .header h1 {
+            font-size: 34px;
+            color: #5e3c2b;
+            letter-spacing: 2px;
+        }
+        .header h1 span {
+            background: #d4b8a0;
+            padding: 0 12px;
+            border-radius: 40px;
+            color: #fff;
+            font-size: 28px;
+        }
+        .header .sub {
+            color: #8b6f5a;
+            font-size: 16px;
+            margin-top: 4px;
+            font-style: italic;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+        .menu-item {
+            background: #fef9f4;
+            border-radius: 24px;
+            padding: 18px 14px 16px;
+            border: 1px solid #e6d6c8;
+            text-align: center;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+        .menu-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            border-color: #b8957a;
+        }
+        .menu-item .emoji {
+            font-size: 48px;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .menu-item .name {
+            font-weight: 700;
+            font-size: 18px;
+            color: #3d281d;
+        }
+        .menu-item .price {
+            color: #7a5d48;
+            font-size: 16px;
+            margin: 4px 0 10px;
+        }
+        .menu-item .btn-add {
+            background: #5e3c2b;
+            border: none;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: inherit;
+        }
+        .menu-item .btn-add:hover {
+            background: #3d281d;
+            transform: scale(1.02);
+        }
+        .cart-section {
+            background: #f5ede6;
+            border-radius: 28px;
+            padding: 20px 22px;
+            border: 1px solid #dfcebf;
+            margin-top: 6px;
+        }
+        .cart-section h2 {
+            font-size: 22px;
+            color: #3d281d;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #dfcebf;
+            padding-bottom: 10px;
+            margin-bottom: 14px;
+        }
+        .cart-section h2 .badge {
+            background: #5e3c2b;
+            color: #fff;
+            font-size: 14px;
+            padding: 2px 14px;
+            border-radius: 40px;
+            font-weight: 400;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #e6d6c8;
+            font-size: 15px;
